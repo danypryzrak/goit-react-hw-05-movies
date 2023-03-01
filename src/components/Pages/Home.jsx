@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { dataLoad } from 'Services/MoviesApi'
 
-export const Home = () => {
+const Home = () => {
 
     const [movies, setMovies] = useState()
     const [page] = useState(1)
@@ -35,3 +35,5 @@ export const Home = () => {
     
   )
 }
+
+export default Home

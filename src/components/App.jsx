@@ -18,8 +18,6 @@ const Home = lazy(() => import('./Pages/Home'));
 
 export const App = () => {
 
-
-
   return (<Suspense fallback={<div>...Loading</div>}>
   <Routes>
     <Route path='/' element={<Layout/>} >

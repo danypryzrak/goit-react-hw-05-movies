@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, Outlet, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { getDetails } from 'Services/MoviesApi'
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
 
     const { id } = useParams()
   const [movie, setMovie] = useState()
@@ -49,3 +49,5 @@ export const MovieDetails = () => {
   </>
   )
 }
+
+export default MovieDetails
