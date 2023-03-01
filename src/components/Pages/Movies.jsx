@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, Outlet, useLocation, useSearchParams } from 'react-router-dom'
 import { getSearchFilms } from 'Services/MoviesApi'
 
-export const MoviesPage = () => {
+export const Movies = () => {
 
     const [searchParams, setSearchParams] = useSearchParams()
     const [movies, setMovies] = useState()
