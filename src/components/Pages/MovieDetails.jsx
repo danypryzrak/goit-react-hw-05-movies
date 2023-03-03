@@ -18,8 +18,9 @@ const MovieDetails = () => {
   return (
     movie && <>
     <button onClick={() => navigate(location.state.back)} type='button'>Back</button>
-    <div>
-      <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="" width='200' height='320' />
+      <div>
+        {movie.poster_path ? <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="" width='200' height='320' />
+        : <p>Sorry, we dont have a poster</p>}
       <ul>
         <li>
             <h2>{movie.title} ({movie.release_date.slice(0, 4)})</h2>
