@@ -18,8 +18,8 @@ const [casts, setCasts] = useState()
   return (
       casts && <ul>
           {casts.map(cast => {
-              return <li key={nanoid()}>
-                  <img src={`https://image.tmdb.org/t/p/w500${cast.profile_path}`} alt="actor" width='120' height='180'/>
+            return <li key={nanoid()}>
+                {cast.profile_path ? <img src={`https://image.tmdb.org/t/p/w500${cast.profile_path}`} alt="actor" width='120' height='180'/> : <p>Sorry, we dont have a foto</p>}
                   <h4>{cast.name}</h4>
                   <p>Character: {cast.character}</p>
             </li>
